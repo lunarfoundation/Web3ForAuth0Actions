@@ -349,11 +349,7 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 
-##
-# Additional Lunar Foundation Entries
-##
-
-## Node.JS specific
+# Node.JS specific
 node_modules
 .env
 coverage
@@ -363,7 +359,7 @@ logs
 package-lock.json
 /.vs
 
-### VisualStudioCode template
+# VisualStudioCode template
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -372,4 +368,8 @@ package-lock.json
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
+
+# Additional Lunar Foundation Entries
+dist
 *.tgz
+src/README.md

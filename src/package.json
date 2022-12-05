@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "tsc --build",
-    "postbuild": "copyfiles abis/*.json dist && copyfiles -f ../README.md dist",
+    "postbuild": "copyfiles abis/*.json ../README.md dist",
     "clean": "tsc --build --clean",
     "test": "mocha -r ts-node/register 'tests/**/*.ts'"
   },
