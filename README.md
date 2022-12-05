@@ -61,5 +61,5 @@ You now have some functioning badassery!
 
 <!-- Link References -->
 
-[npm-badge]: https://img.shields.io/npm/v/web3-for-auth0-actions?logo=NPM&style=for-the-badge
+[npm-badge]: https://img.shields.io/npm/v/web3-for-auth0-actions?color=%236639E4&logo=NPM&style=for-the-badge
 [npm-pkg-link]: https://www.npmjs.com/package/web3-for-auth0-actions
