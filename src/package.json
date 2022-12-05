@@ -1,0 +1,54 @@
+{
+  "name": "web3-for-auth0-actions",
+  "version": "0.0.4",
+  "description": "Web3ForAuth0Actions allows developers to quickly introduce web3 capabilities into Auth0 Actions.",
+  "main": "dist/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "postbuild": "copyfiles abis/*.json dist && copyfiles -f ../README.md dist",
+    "clean": "tsc --build --clean",
+    "test": "mocha -r ts-node/register 'tests/**/*.ts'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lunarfoundation/Web3ForAuth0Actions.git"
+  },
+  "keywords": [
+    "web3",
+    "auth0",
+    "rules"
+  ],
+  "author": "Lunar Foundation opensource@lunar.io",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lunarfoundation/Web3ForAuth0Actions/issues"
+  },
+  "homepage": "https://github.com/lunarfoundation/Web3ForAuth0Actions#readme",
+  "devDependencies": {
+    "@typechain/ethers-v5": "^10.1.1",
+    "@types/auth0": "^2.35.7",
+    "@types/chai": "^4.3.4",
+    "@types/mocha": "^10.0.1",
+    "@vedicium/auth0-actions-sdk": "^0.1.3",
+    "axios": "^0.26.1",
+    "chai": "^4.3.7",
+    "copyfiles": "^2.4.1",
+    "dotenv": "^16.0.0",
+    "eslint": "^8.28.0",
+    "eslint-plugin-node": "^11.1.0",
+    "ethereum-abi-types-generator": "^1.3.2",
+    "mocha": "^10.1.0",
+    "prettier": "^2.8.0",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typechain": "^8.1.0",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "ethers": "^5.7.2",
+    "linqts": "^1.14.4"
+  }
+}

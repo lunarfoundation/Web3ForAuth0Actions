@@ -1,0 +1,21 @@
+{
+    "created_at": "2022-11-30T16:37:46.333Z",
+    "identities": [
+        {
+            "provider": "oauth2",
+            "user_id": "siwe|eip155%3A1%3A0x1F2BC20C4A2c441D5001C40E82704422775366B5",
+            "connection": "siwe",
+            "isSocial": true
+        }
+    ],
+    "name": "",
+    "nickname": "0x1F2BC20C4A2c441D5001C40E82704422775366B5",
+    "picture": "https://s.gravatar.com/avatar/4bac7cff906322d7079c0b2b53f813db?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2F0x.png",
+    "updated_at": "2022-11-30T16:37:46.333Z",
+    "user_id": "oauth2|siwe|eip155%3A1%3A0x1F2BC20C4A2c441D5001C40E82704422775366B5",
+    "last_ip": "98.230.81.116",
+    "last_login": "2022-11-30T16:37:46.331Z",
+    "logins_count": 1,
+    "blocked_for": [],
+    "guardian_authenticators": []
+}
