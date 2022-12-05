@@ -6,10 +6,17 @@
     <h2>The future of money is digital.</h2>
 </div>
 
+<div align="center">
+<br /> 
+
+[![NPM Package][npm-badge]][npm-pkg-link]
+
+</div>
+
 ## Web3ForAuth0Actions
 Brought to you by the Lunar Foundation. https://lunar.io
 
-A library for web3 functionality that can be leveraged in Auth0 Actions. Requires Sign In With Ethereum (SIWE).
+A library for web3 functionality that can be leveraged in Auth0 Actions. Requires [Sign In With Ethereum](https://marketplace.auth0.com/integrations/siwe) (SIWE). 
 
 ## Getting Started
 
@@ -51,3 +58,8 @@ exports.onExecutePostLogin = async (event, api) => {
 11. Profit!!!
 
 You now have some functioning badassery! 
+
+<!-- Link References -->
+
+[npm-badge]: https://img.shields.io/npm/v/web3-for-auth0-actions?logo=NPM&style=for-the-badge
+[npm-pkg-link]: https://www.npmjs.com/package/web3-for-auth0-actions
