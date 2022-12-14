@@ -1,6 +1,6 @@
 {
   "name": "web3-for-auth0-actions",
-  "version": "0.0.4",
+  "version": "0.0.7",
   "description": "Web3ForAuth0Actions allows developers to quickly introduce web3 capabilities into Auth0 Actions.",
   "main": "dist/index.js",
   "directories": {

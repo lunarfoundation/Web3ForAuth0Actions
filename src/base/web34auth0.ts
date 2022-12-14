@@ -67,7 +67,11 @@ export class Web3ForAuth0Actions {
     if (!identities.Any()) return [false, "The logged-in user did not contain any Identities."];
 
     // MASTERJEDI: Combine Javscript craziness into one LINQ statement.
-    const wallets = identities.Where(c => c?.connection === this.SIWE).Select(c => c?.user_id.substring(18));
+    const wallets = identities.Where(c => c?.connection === this.SIWE)
+      // MASTERJEDI: The user_id will be in the format siwe|eip155%3A56%3A{WALLETADDRESS}. Let's decode it.
+      .Select(c => decodeURIComponent(c?.user_id))
+      // MASTERJEDI: %3A is an encoded colon, and the address starts after the last one.
+      .Select(c => c.slice(c.lastIndexOf(':') + 1));
 
     if (!wallets.Any()) return [false, "The logged-in user does not have any wallets registered. Please Sign In with Ethereum and try again."];
 
