@@ -37,15 +37,21 @@ exports.onExecutePostLogin = async (event, api) => {
   const { Web3ForAuth0Actions } = require("web3-for-auth0-actions");
   const ContractAddress = "YOUR CONTRACT ADDRESS HERE";
 
+  // SHEPARD: Set the Debug and the DecodeUserId Modes here.
   Web3ForAuth0Actions.DebugMode = true;
+  Web3ForAuth0Actions.DecodeUserIds = false;
+
   // SHEPARD: Chain Id '56' is the BNB Chain Mainnet. 
   let [isValidReturn, returnMessage] = await Web3ForAuth0Actions.validateWalletBalance(event, 56, 1, ContractAddress);
   console.log(`IsValidReturn: ${isValidReturn}`);
   console.log(`ReturnMessage: ${returnMessage}`);
   
-  // SHEPARD: Bounce anyone that doesn't have the minimum balance in their wallet.
+  // SHEPARD: Bounce anyone that doesn't have the minimum balance in their wallet. We've provided a few common examples of what bouncing someone might look like.
   if (!isValidReturn) {
+    // SHEPARD: Option # 1 - Invoke the deny() function and pass the 'returnMessage'.
     api.access.deny(returnMessage);
+    // SHEPARD: Option # 2 - Redirect the user to a new site and pass the 'returnMessage' as part of the query.
+    api.redirect.sendUserTo("YOUR REDIRECT SITE GOES HERE", { query: {error: returnMessage } });
   }
 };
 ```
